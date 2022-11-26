@@ -20,11 +20,11 @@ const wishRoutes = require('./routes/wishlist')
 
 //const fetch = require('node-fetch')
 require('dotenv').config()
-//const uri = 'mongodb+srv://Davidezeh:StrongPassWord2003@cluster0.qriiurj.mongodb.net/TEST?retryWrites=true&w=majority'
+const uri = 'mongodb+srv://Davidezeh:StrongPassWord2003@cluster0.qriiurj.mongodb.net/TEST?retryWrites=true&w=majority'
 
 async function connect (){
   try {
-    await mongoose.connect(process.env.MONGO_URI /*{useUnifiedTopology: true, useCreateIndex: true, useNewUrlParser: true}*/)
+    await mongoose.connect(uri /*{useUnifiedTopology: true, useCreateIndex: true, useNewUrlParser: true}*/)
     console.log('connected to mongo DB')
   } catch (error){
     console.log(error)
