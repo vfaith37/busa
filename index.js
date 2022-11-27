@@ -87,7 +87,7 @@ app.use('/api/products',productRoute)
 app.use('/api/reference',refRoutes)
 app.use('/api/wishlist', wishRoutes)
 // PORT
-const port = 6521;
+const port = process.env.PORT || 3030;
 
 // Starting a server
 app.listen(port, () => {
